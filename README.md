@@ -3,6 +3,10 @@ selectBox
 
 Very simple jQuery &lt;select> wrapper plugin.
 
+- Responsive
+- Cross-browser compliant
+- Mobile friendly
+
 ## Usage:
 
 ### HTML
