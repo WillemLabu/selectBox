@@ -1,0 +1,53 @@
+/*  ==========================================================================
+     .selectBox styles
+    ========================================================================== */
+
+.selectBox {
+	height: 30px;
+	line-height: 30px;
+	position: relative;
+	display: inline-block
+}
+
+.selectBox a {
+	color: #333;
+	background: #ddd;
+
+/*
+ *  This positions the <a> behind the <select>
+ *  There's no need to edit this.
+ */
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	display: block;
+	position: absolute;
+}
+
+.selectBox.over a { background: #eee }
+
+.selectBox span { display: block }
+
+
+/*
+ * This hides the <select> visually
+ * There's no need to edit this.
+ */
+.selectBox select {
+	border: 0;
+	opacity: 0;
+	z-index: 2;
+	width: 100%;
+	height: 100%;
+	display: block;
+	cursor: pointer;
+	position: relative;
+	*filter: alpha(opacity=0);
+	-webkit-appearance: button;
+}
+
+/*  ==========================================================================
+     # END .selectBox styles
+    ========================================================================== */
