@@ -53,6 +53,8 @@
 
 		});
 
+		return this; // Chaining!
+
 	}
 
 })(jQuery);
