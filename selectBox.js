@@ -21,19 +21,9 @@
 			// Show a visible change when a selection is made
 			$(this).on('change', function () {
 
-				var options = [];
-				$(this).children('option').each(function(){
-					options.push($(this).val())
-				});
+				// Closure!
+				setLabel($(this));
 
-				// This is horrible...
-				$(this).siblings('a').children('.label').html(
-					$(
-						$(this).children('option')[
-							$.inArray($(this).val(), options)
-						]
-					).text()
-				);
 			});
 
 			// Add a class when hovering
@@ -51,6 +41,25 @@
 				$(this).parent('.selectBox').removeClass('error');
 			});
 
+
+			function setLabel($that) {
+
+				var options = [];
+
+				$that.children('option').each(function () {
+					options.push($(this).val())
+				});
+
+				// This is horrible...
+				$that.siblings('a').children('.label').html(
+					$($that.children('option')[$.inArray($that.val(), options)]).text()
+				);
+			
+			}
+
+			// On DOM Ready, show the currently selected value.
+			setLabel($(this));
+			
 		});
 
 		return this; // Chaining!
