@@ -27,4 +27,4 @@ Very simple jQuery &lt;select> wrapper plugin.
 
 - Add your own styles. These are the minimum.
 - Add an arrow: there's a &lt;span class="indicator"&gt;
-- First <option> becomes the label.
+- First &lt;option&gt; becomes the label.
